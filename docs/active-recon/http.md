@@ -57,4 +57,3 @@ gobuster dir -e -u http://$IP -k -w /usr/share/wordlists/dirbuster/directory-lis
 ```bash
 sudo nmap -p <PORT> -A --script=http* --script=vuln $IP -v | tee nmap-http.txt
 ```
-

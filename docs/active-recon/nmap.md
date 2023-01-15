@@ -65,3 +65,25 @@ In-depth scan
 ```bash
 sudo nmap -p <PORT> -A -sU $IP -v | tee nmap-depth-udp.txt
 ```
+
+### Scanning behind proxies
+
+#### Nmap scan behind a proxy
+```bash
+sudo nmap --proxies http://$IP:80 -A $IP -v | tee nmap-proxied.txt
+```
+
+#### Proxychains method
+1. Download proxychains if not installed
+```bash
+sudo apt install proxychains4 -y 
+```
+2. Edit `/etc/proxychains4.conf` by adding the IP and port:
+```bash
+echo 'http $IP $PORT' >> /etc/proxychains4.conf
+```
+3. Scan target through `proxychains`
+```bash
+sudo proxychains nmap -T5 -sS $IP -v | tee nmap-proxied.txt
+```
+
