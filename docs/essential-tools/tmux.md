@@ -7,6 +7,7 @@ parent: Essential Tools
 ---
 
 # Tmux
+### Tmux Installation
 `tmux` conf that allows for copy/pasting and other convenient options within Tmux 
 
 1. Install tmux
@@ -24,7 +25,7 @@ touch ~/.tmux.conf
 source ~/.tmux.conf
 ```
 
-Tmux configuration file:
+### Tmux configuration file
 ```bash
 # Linux only
 set -g mouse on
@@ -53,3 +54,25 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @continuum-restore 'on'
 run '~/.tmux/plugins/tpm/tpm'
 ```
+### Mini Tmux Cheatsheet 
+Reference - https://tmuxcheatsheet.com/
+
+#### Synchronize Panes
+1. `CTRL-B` 
+2. `SHIFT` + `:`
+3.  
+```bash
+setw sychronize-panes on
+```
+
+#### De-synchronize Panes
+1. `CTRL-B`
+2. `SHIFT` + `:`
+3. 
+```bash
+setw synchronize-panes off
+```
+
+
+
+
