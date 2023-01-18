@@ -32,19 +32,19 @@ curl http://$IP/sitemap.xml
 ```
 
 ### Dirsearch
-Bruteforce with common list
+#### Bruteforce with common list
 ```bash
 dirsearch -w /usr/share/wordlists/dirb/common.txt -u http://$IP:$PORT -o $PWD/dirsearch.txt
 ```
-Bruteforce with common list (recursive)
+#### Bruteforce with common list (recursive)
 ```bash
 dirsearch -r -w /usr/share/wordlists/dirb/common.txt -u http://$IP:$PORT -o $PWD/dirsearch.txt
 ```
-Bruteforce with big.txt list
+#### Bruteforce with big.txt list
 ```bash
 dirsearch -w /usr/share/wordlists/dirb/big.txt -u http://$IP:$PORT -o $PWD/dirsearch.txt
 ```
-Bruteforce with big.txt list (recursive)
+#### Bruteforce with big.txt list (recursive)
 ```bash
 dirsearch -r -w /usr/share/wordlists/dirb/big.txt -u http://$IP:$PORT -o $PWD/dirsearch.txt
 ```

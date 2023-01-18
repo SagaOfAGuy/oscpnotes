@@ -54,6 +54,10 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @continuum-restore 'on'
 run '~/.tmux/plugins/tpm/tpm'
 ```
+
+
+
+
 ### Mini Tmux Cheatsheet 
 Reference - https://tmuxcheatsheet.com/
 
@@ -65,6 +69,18 @@ Reference - https://tmuxcheatsheet.com/
 setw sychronize-panes on
 ```
 
+#### Make split panes default in shell
+
+1. Add split session setting in `~/.zshrc`
+```bash
+echo "tmux new-session \; split-window -v\; split-window -h \; split-window -h" >> ~/.zshrc
+```
+
+2. Source zsh file
+```bash
+source ~/.zshrc
+```
+
 #### De-synchronize Panes
 1. `CTRL-B`
 2. `SHIFT` + `:`
@@ -74,5 +90,58 @@ setw synchronize-panes off
 ```
 
 
+#### Copy and paste
+1. `CTRL` + `B` + `[`
+2. `Space`
+3. Then, press `y` to paste 
 
+
+#### Scroll Mode
+1. Scroll up mode: `CRTL` + `B` + `]`
+2. To quit: `q`
+
+
+#### Start Tmux
+1. `$ tmux`
+
+#### Rename Tmux Session
+1. `CTRL b`
+2. `Shift $`
+
+
+#### Spawn New TMUX Session without attaching
+
+1. `$ tmux new -s newshell -d`
+
+#### List TMUX sessions
+
+1. `$ tmux ls`
+
+
+#### Exit TMUX session without closing session
+
+1. `CTRL b`
+2. `d`
+
+#### Re-attach to TMUX session by name
+1. `tmux attach -t <SessionName>`
+
+
+#### Delete TMUX session by session name
+1. `tmux kill-session -t <SessionName>`
+
+#### Swap TMUX session
+1. `CTRL b`
+2. `s`
+
+
+#### Close all TMUX sessions all but one
+1. `tmux kill-session -t <SessionName> -a`
+
+
+
+#### Change current directory of TMUX session
+1. `CTRL b`
+2. `Shift:`
+3. `attach -c ~/Your/Directory/Here`
 
