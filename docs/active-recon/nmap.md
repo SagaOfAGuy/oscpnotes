@@ -18,7 +18,7 @@ parent: Active Recon
 
 
 ### TCP Scans
-Quickly scan all ports
+Quick Scan
 ```bash
 sudo nmap -T5 -p- $IP -v | tee nmap-quick-tcp.txt
 ```
@@ -34,7 +34,7 @@ sudo nmap -A -p <PORTS> -sV $IP -v | tee nmap-tcp.txt
 
 Quick Scan + In-depth Scan
 ```bash
-sudo nmap -T5 -p- $IP -v | grep Discovered | awk -F " " '{print substr($4,1,length($4)-4)}' | tee ips.txt && sudo nmap -p `cat ips.txt` -A $IP -v | tee nmap-depth.txt 
+sudo nmap -T5 -p- $IP -v | grep Discovered | awk -F " " '{print substr($4,1,length($4)-4)}' | ports.txt && sudo nmap -p $(tr '\n', < ports.txt) -A $IP -v | tee nmap-depth.txt
 ```
 
 Scan if ICMP ping is blocked
