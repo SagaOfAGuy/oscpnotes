@@ -34,7 +34,7 @@ sudo nmap -A -p <PORTS> -sV $IP -v | tee nmap-tcp.txt
 
 Quick Scan + In-depth Scan
 ```bash
-sudo nmap -Pn -T5 -p- $IP -v | grep Discovered | awk -F " " '{print substr($4,1,length($4)-4)}' | tee ports.txt && sudo nmap -p $(tr '\n' , < ports.txt) -A $IP -v | tee nmap-depth.txt
+sudo nmap -Pn -T5 -p- $IP -v | grep Discovered | awk -F " " '{print substr($4,1,length($4)-4)}' | tee ports.txt && sudo nmap -p $(tr '\n' , < ports.txt) -A -Pn $IP -v | tee nmap-depth.txt
 ```
 
 Scan if ICMP ping is blocked
