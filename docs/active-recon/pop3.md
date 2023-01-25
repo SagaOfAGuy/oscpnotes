@@ -6,7 +6,7 @@ parent: Active Recon
 
 ---
 
-# Pop3 Enumeration
+# POP3 Enumeration
 {: .no_toc }
 
 ## Table of Contents
