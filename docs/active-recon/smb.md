@@ -255,12 +255,12 @@ Script Usage:
 ```bash
 sudo apt install cifs cifs-utils
 ```
----
+
 2. Create a directory in /mnt :
 ```bash
 sudo mkdir -p /mnt/user
 ```
----
+
 3. Mount the Samba share:
 ```bash
 sudo mount -t cifs //$IP/<share name> /mnt/user

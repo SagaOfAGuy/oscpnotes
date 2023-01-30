@@ -15,16 +15,15 @@ parent: Active Recon
 {:toc}
 
 ### Default Credentials Check
-Login with the following usernames/passwords:
+1. Login with the following usernames/passwords
 ```bash
 Username: root
 Password: toor
-
 Username: root
 Password: root
 ```
 
-Attempt login: 
+2. Attempt login
 ```bash
 ssh root@$IP
 ```
