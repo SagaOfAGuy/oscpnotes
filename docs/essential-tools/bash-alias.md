@@ -17,21 +17,22 @@ parent: Essential Tools
 
 ---
 
-## Useful aliases for file transfers, HTTP server setup, etc. 
+Useful aliases for file transfers, HTTP server setup, etc. 
 
 
-Aliases can be put in ~/.zshrc or ~/.bashrc, and sourced. 
+Aliases can be put in `~/.zshrc` or `~/.bashrc`, and sourced. 
 
-*<mark style="color: red">NOTE: Make sure to run the following after adding your desired alias:</mark>*
+<mark style="color: red">NOTE: Make sure to run the following after adding your desired alias:</mark>
 ```bash
 source ~/.zshrc && /bin/zsh
 ```
 
 **<mark style="color: red">NOTE: All aliases that require a listening port will on default create a listener on port 8000</mark>**
 
-### Portable Servers (SMB, HTTP, etc)
-Alias to create portable SMB and HTTP servers
-
+## **<ins>Portable Servers (SMB, HTTP, etc)</ins>**
+Aliases to create portable SMB and HTTP servers
+<br>
+<br>
 Alias usage: 
 ```bash
 httpserver <PORT>
@@ -50,7 +51,7 @@ function httpserver() {
 alias apacheserver='sudo systemctl start apache2'
 ```
 
-### Tool Grabbing
+## **<ins>Tool Grabbing</ins>**
 Aliases for grabbing essential tools like `linpeas.sh`, `winpeasany.bat`, etc. 
 ```bash
 # Tool grabbing 
@@ -85,7 +86,7 @@ alias les2='curl https://raw.githubusercontent.com/jondonas/linux-exploit-sugges
 alias phprevshellwin='curl https://raw.githubusercontent.com/Dhayalanb/windows-php-reverse-shell/master/Reverse%20Shell.php > php-reverse-shell-win.php'
 ```
 
-### Windows Reverse TCP Shells
+## **<ins>Windows Reverse TCP Shells</ins>**
 Aliases to generate MSF reverse shells
 
 Alias Usage:
@@ -151,7 +152,7 @@ function unstaged64lin() {
 }
 ```
 
-### Macro Document Shells
+## **<ins>Macro Document Shells</ins>**
 Aliases to create document macros
 ```bash
 # Macro Document shells
@@ -163,7 +164,7 @@ function macropayload() {
 }
 ```
 
-### Metasploit Webshells 
+## **<ins>Metasploit Webshells</ins>**
 Aliases to create metasploit webshells
 ```bash
 # Metasploit shells - Webshells 
@@ -193,7 +194,7 @@ function aspshell() {
 }
 ```
 
-### Windows Meterpreter Shells
+## **<ins>Windows Meterpreter Shells</ins>**
 Aliases to create windows meterpreter shells
 ```bash
 # Meterpreter shells-  Windows 
@@ -224,7 +225,7 @@ function meterpreterwin64unstaged() {
 }
 ```
 
-### Linux Meterpreter Shells
+## **<ins>Linux Meterpreter Shells</ins>**
 Aliases to create linux meterpreter shells
 ```bash
 # Meterpreter shells - Linux
@@ -255,7 +256,7 @@ function meterpreterlin64unstaged() {
 }
 ```
 
-### Windows DLL Shells
+## **<ins>Windows DLL Shells</ins>**
 Aliases to create Windows DLL shells
 ```bash
 # Staged - x64
@@ -291,7 +292,7 @@ function dllshellunstagedx86() {
 }
 ```
 
-### Compiling C Code
+## **<ins>Compiling C Code</ins>**
 Aliases to compile C code
 ```bash
 function x86compile() { 

@@ -14,26 +14,26 @@ parent: Active Recon
 1. TOC
 {:toc}
 
-### Grabbing SMTP banner
+## **<ins>Grabbing SMTP banner</ins>**
 ```bash
-nc -nv $IP 25
+nc -nvC $IP 25
 ```
-### Search SMTP version in Searchsploit
+## **<ins>Search SMTP version in Searchsploit</ins>**
 ```bash
 searchsploit <SMTP_VERSION>
 ```
 
-### Search Google for SMTP version
+## **<ins>Search Google for SMTP version</ins>**
 ```bash
 https://www.google.com/search?q=<SMTP_VERSION>
 ```
 
-### Search Github for SMTP Version
+## **<ins>Search Github for SMTP Version</ins>**
 ```bash
 https://www.google.com/search?q=Github <SMTP_VERSION> Exploit
 ```
 
-### Enumerate Users via Python script
+## **<ins>Enumerate Users via Python script</ins>**
 Python code for verifying usernames in SMTP
 ```python
 #!/usr/bin/python
@@ -65,7 +65,7 @@ python smtpenum.py $IP root
 ```
 
 
-### SMTP Nmap Scan
+## **<ins>SMTP Nmap Scan</ins>**
 ```bash
 sudo nmap -p 25 -sV -A --script=smtp* --script=vuln $IP -v | tee nmap-smtp.txt
 ```

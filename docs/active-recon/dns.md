@@ -17,7 +17,7 @@ parent: Active Recon
 ---
 
 
-### Resolve IP address of Domain
+## **<ins>Resolve IP address of Domain</ins>**
 ```bash
 host www.google.com
 ```
@@ -27,46 +27,46 @@ host www.google.com
 nslookup google.com
 ```
 
-### Find Mail Record Entries
+## **<ins>Find Mail Record Entries</ins>**
 Mail records are **names of servers responsible for handling mail for a domain**
 ```bash
 host -t mx google.com
 ```
-### Find Nameserver Entries
+## **<ins>Find Nameserver Entries</ins>**
 Nameserver entries contain names of the servers that host DNS records for a domain
 ```bash
 host -t ns google.com
 ```
 
-### Find 'A' Record (IP Address of hostname)
+## **<ins>Find 'A' Record (IP Address of hostname)</ins>**
 'A Records' contain the IP addresses of a hostname
 ```bash
 host -t a google.com
 ```
 
-### Find Pointer records 
+## **<ins>Find Pointer records</ins>**
 Pointer records are used to find records associated with an **IP Address**
 ```bash
 host -t ptr $IP
 ```
-### Find Canonical Name records
+## **<ins>Find Canonical Name records</ins>**
 Canonical names are aliases for other hosts
 ```bash
 host -t -cname $IP
 ```
 
-### Find Text records
+## **<ins>Find Text records</ins>**
 Text records are arbitrary data that can be used for domain ownership verification
 ```bash
 host -t txt $IP
 ```
 
-### DNS Nmap Scan
+## **<ins>DNS Nmap Scan</ins>**
 ```bash
 sudo nmap -A -p 53 -sV --script=dns* $IP -v | tee nmap-dns.txt
 ```
 
-### Zone Transfer
+## **<ins>Zone Transfer</ins>**
 ```bash
 dig axfr @$IP  
 ```
