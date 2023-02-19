@@ -8,6 +8,6 @@ has_children: true
 
 # Essential Tools and Setup
 
-#### Extra tool, settings and accessories for Kali Machine 
+## Extra tools, settings and accessories for Kali Machine 
 
 
