@@ -29,7 +29,7 @@ source ~/.zshrc && /bin/zsh
 
 **<mark style="color: red">NOTE: All aliases that require a listening port will on default create a listener on port 8000</mark>**
 
-## **<ins>Portable Servers (SMB, HTTP, etc)</ins>**
+## **Portable Servers (SMB, HTTP, etc)**
 Aliases to create portable SMB and HTTP servers
 <br>
 <br>
@@ -51,7 +51,7 @@ function httpserver() {
 alias apacheserver='sudo systemctl start apache2'
 ```
 
-## **<ins>Tool Grabbing</ins>**
+## **Tool Grabbing**
 Aliases for grabbing essential tools like `linpeas.sh`, `winpeasany.bat`, etc. 
 ```bash
 # Tool grabbing 
@@ -86,7 +86,7 @@ alias les2='curl https://raw.githubusercontent.com/jondonas/linux-exploit-sugges
 alias phprevshellwin='curl https://raw.githubusercontent.com/Dhayalanb/windows-php-reverse-shell/master/Reverse%20Shell.php > php-reverse-shell-win.php'
 ```
 
-## **<ins>Windows Reverse TCP Shells</ins>**
+## **Windows Reverse TCP Shells**
 Aliases to generate MSF reverse shells
 
 Alias Usage:
@@ -122,7 +122,7 @@ function unstaged64win() {
 }
 ```
 
-### Linux Reverse TCP Shells
+## **Linux Reverse TCP Shells**
 Aliases to create MSF Linux reverse shells
 ```bash
 # Staged and unstaged Linux Shells
@@ -152,7 +152,7 @@ function unstaged64lin() {
 }
 ```
 
-## **<ins>Macro Document Shells</ins>**
+## **Macro Document Shells**
 Aliases to create document macros
 ```bash
 # Macro Document shells
@@ -164,7 +164,7 @@ function macropayload() {
 }
 ```
 
-## **<ins>Metasploit Webshells</ins>**
+## **Metasploit Webshells**
 Aliases to create metasploit webshells
 ```bash
 # Metasploit shells - Webshells 
@@ -194,7 +194,7 @@ function aspshell() {
 }
 ```
 
-## **<ins>Windows Meterpreter Shells</ins>**
+## **Windows Meterpreter Shells**
 Aliases to create windows meterpreter shells
 ```bash
 # Meterpreter shells-  Windows 
@@ -225,7 +225,7 @@ function meterpreterwin64unstaged() {
 }
 ```
 
-## **<ins>Linux Meterpreter Shells</ins>**
+## **Linux Meterpreter Shells**
 Aliases to create linux meterpreter shells
 ```bash
 # Meterpreter shells - Linux
@@ -256,7 +256,7 @@ function meterpreterlin64unstaged() {
 }
 ```
 
-## **<ins>Windows DLL Shells</ins>**
+## **Windows DLL Shells**
 Aliases to create Windows DLL shells
 ```bash
 # Staged - x64
@@ -292,7 +292,7 @@ function dllshellunstagedx86() {
 }
 ```
 
-## **<ins>Compiling C Code</ins>**
+## **Compiling C Code**
 Aliases to compile C code
 ```bash
 function x86compile() { 

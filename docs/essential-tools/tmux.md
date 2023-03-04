@@ -7,7 +7,7 @@ parent: Essential Tools
 ---
 
 # Tmux
-## **<ins>Tmux Installation</ins>**
+## **Tmux Installation**
 `tmux` conf that allows for copy/pasting and other convenient options within Tmux 
 
 1. Install `tmux`
@@ -25,7 +25,7 @@ touch ~/.tmux.conf
 source ~/.tmux.conf
 ```
 
-## **<ins>Tmux configuration file</ins>**
+## **Tmux configuration file**
 ```bash
 # Linux only
 set -g mouse on
@@ -58,10 +58,10 @@ run '~/.tmux/plugins/tpm/tpm'
 
 
 
-## **<ins>Mini Tmux Cheatsheet</ins>** 
+## **Mini Tmux Cheatsheet** 
 Reference - [https://tmuxcheatsheet.com/](https://tmuxcheatsheet.com/)
 
-### <ins>Synchronize Panes</ins>
+### Synchronize Panes
 1. `CTRL-B` 
 2. `SHIFT` + `:`
 3.  
@@ -69,7 +69,7 @@ Reference - [https://tmuxcheatsheet.com/](https://tmuxcheatsheet.com/)
 setw sychronize-panes on
 ```
 
-### <ins>Make split panes default in shell</ins>
+### Make split panes default in shell
 1. Add split session setting in `~/.zshrc`
 ```bash
 echo "tmux new-session \; split-window -v\; split-window -h \; split-window -h" >> ~/.zshrc
@@ -80,63 +80,115 @@ echo "tmux new-session \; split-window -v\; split-window -h \; split-window -h" 
 source ~/.zshrc
 ```
 
-### <ins>De-synchronize Panes</ins>
-1. `CTRL-B`
-2. `SHIFT` + `:`
-3. 
+### De-synchronize Panes
+```bash
+CTRL-B
+```
+
+```bash
+SHIFT + :
+```
+
 ```bash
 setw synchronize-panes off
 ```
 
 
-### <ins>Copy and paste</ins>
-1. `CTRL` + `B` + `[`
-2. `Space`
-3. Then, press `y` to paste 
+### Copy and paste
+```bash
+CTRL + B + [
+```
+
+```bash
+Space
+```
+
+Then, press y to paste 
 
 
-### <ins>Scroll Mode</ins>
-1. Scroll up mode: `CRTL` + `B` + `]`
-2. To quit: `q`
+### Scroll Mode
+Scroll up mode: 
+```bash
+CRTL + B + ]
+```
+To quit: 
+```bash
+q
+```
 
 
-### <ins>Start Tmux</ins>
-1. `$ tmux`
+### Start Tmux
+```bash
+tmux
+```
 
-### <ins>Rename Tmux Session</ins>
-1. `CTRL b`
-2. `Shift $`
+### Rename Tmux Session
+```bash
+CTRL b
+```
 
-
-### <ins>Spawn New TMUX Session without attaching</ins>
-1. `$ tmux new -s newshell -d`
-
-### <ins>List TMUX sessions</ins>
-1. `$ tmux ls`
-
-
-### <ins>Exit TMUX session without closing session</ins>
-1. `CTRL b`
-2. `d`
-
-### <ins>Re-attach to TMUX session by name</ins>
-1. `tmux attach -t <SessionName>`
+```bash
+Shift $
+```
 
 
-### <ins>Delete TMUX session by session name</ins>
-1. `tmux kill-session -t <SessionName>`
+### Spawn New TMUX Session without attaching
+```bash
+tmux new -s newshell -d
+```
 
-### <ins>Swap TMUX session</ins>
-1. `CTRL b`
-2. `s`
-
-
-### <ins>Close all TMUX sessions all but one</ins>
-1. `tmux kill-session -t <SessionName> -a`
-
+### List TMUX sessions
+```bash
+tmux ls
+```
 
 
-### <ins>Change current directory of TMUX session</ins>
-1. `CTRL b`
-2. `Shift:`
-3. `attach -c ~/Your/Directory/Here`
+### Exit TMUX session without closing session
+```bash
+CTRL b
+```
+
+```bash
+d
+```
+
+### Re-attach to TMUX session by name
+```bash
+tmux attach -t <SessionName>
+```
+
+
+### Delete TMUX session by session name
+```bash
+tmux kill-session -t <SessionName>
+```
+
+### Swap TMUX session
+```bash
+CTRL b
+```
+
+```bash
+s
+```
+
+
+### Close all TMUX sessions all but one
+```bash
+tmux kill-session -t <SessionName> -a
+```
+
+
+
+### Change current directory of TMUX session
+```bash
+CTRL b
+```
+
+```bash
+Shift:
+```
+
+```bash
+attach -c ~/Your/Directory/Here
+```

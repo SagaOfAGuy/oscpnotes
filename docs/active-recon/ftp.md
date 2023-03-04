@@ -23,7 +23,7 @@ PASS anonymous
 ```
 
 ## Passive Mode - Issue 
-Issue when the `ftp` keeps giving a ``
+Issue when the `ftp` keeps giving a `Passive Mode Error`
 
 Relevant Issue - https://www.youtube.com/watch?v=i5furEJlySY
 ```bash
