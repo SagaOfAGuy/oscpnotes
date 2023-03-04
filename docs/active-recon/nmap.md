@@ -17,28 +17,28 @@ parent: Active Recon
 ---
 
 
-## **<ins>TCP Scans</ins>**
-### Quick Scan
+## **TCP Scans**
+Quick Scan
 ```bash
 sudo nmap -T5 -p- $IP -v | tee nmap-quick-tcp.txt
 ```
-<br>
-### Scan **x** number of ports
+
+Scan **x** number of ports
 ```bash
 sudo nmap --top-ports=100 $IP -v | tee nmap-top-50.txt
 ```
-<br>
-### In-depth Scan
+
+In-depth Scan
 ```bash
 sudo nmap -A -p <PORTS> -sV $IP -v | tee nmap-tcp.txt
 ```
-<br>
-### Quick Scan + In-depth Scan
+
+Quick Scan + In-depth Scan
 ```bash
 sudo nmap -Pn -T5 -p- $IP -v | grep Discovered | awk -F " " '{print substr($4,1,length($4)-4)}' | tee ports.txt && sudo nmap -p $(tr '\n' , < ports.txt) -A -Pn $IP -v | tee nmap-depth.txt
 ```
-<br>
-### Scan if ICMP ping is blocked
+
+Scan if ICMP ping is blocked
 ```bash
 sudo nmap -Pn -T5 -p- $IP -v | tee nmap-probe-tcp.txt
 sudo nmap -Pn -T5 -p <PORTS> $IP -v | tee nmap-probe-depth.txt
