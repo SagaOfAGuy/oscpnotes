@@ -44,30 +44,32 @@ sudo nmap -Pn -T5 -p- $IP -v | tee nmap-probe-tcp.txt
 sudo nmap -Pn -T5 -p <PORTS> $IP -v | tee nmap-probe-depth.txt
 ```
 <br>
-### Vulnerability Scan
+
+## **Vulnerability Scan**
+Vuln Scan
 ```bash
 sudo nmap --script=vuln -A -p <PORT> $IP -v | tee nmap-vuln.txt
 ```
 
-## **<ins>UDP Scans</ins>**
-### Scan top 50 and 100 UDP ports
+## **UDP Scans**
+
+Scan top 50 and 100 UDP ports
 ```bash
 sudo nmap -T5 --top-ports=50 -sU $IP -v | tee nmap-quick-udp.txt
 sudo nmap -T5 --top-ports=100 -sU $IP -v | tee nmap-quick-udp.txt
 ```
-<br>
-### In-depth scan
+In-depth scan
 ```bash
 sudo nmap -p <PORT> -A -sU $IP -v | tee nmap-depth-udp.txt
 ```
 
-## **<ins>Scanning behind proxies</ins>**
-### Nmap scan behind a proxy
+## **Scanning behind proxies**
+Nmap scan behind a proxy
 ```bash
 sudo nmap --proxies http://$IP:80 -A $IP -v | tee nmap-proxied.txt
 ```
-<br>
-### Nmap scan behind proxy - Proxychains
+
+Nmap scan behind proxy - Proxychains
 1. Download proxychains if not installed
 ```bash
 sudo apt install proxychains4 -y 

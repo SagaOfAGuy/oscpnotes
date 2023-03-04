@@ -18,7 +18,7 @@ parent: Active Recon
 
 
 
-### NFS Nmap Scans
+## NFS Nmap Scans
 ```bash
 sudo nmap -sV -p 111 --script=rpcinfo $IP | tee nmap-nfs-rpcinfo.txt
 ```
@@ -27,7 +27,7 @@ sudo nmap -sV -p 111 --script=rpcinfo $IP | tee nmap-nfs-rpcinfo.txt
 sudo nmap -sV -p 111 --script nfs* $IP | tee nmap-nfs.txt
 ```
 
-### Mount NFS share
+## Mount NFS share
 1. Mount NFS share
 ```bash
 sudo mount -o nolock $IP:/$SHARE_PATH
@@ -43,7 +43,7 @@ sudo useradd -u $UID $USER
 su $USER
 ```
 
-### Unmount NFS share
+## Unmount NFS share
 ```bash
 sudo umount -f -l $SHARE_PATH
 ```

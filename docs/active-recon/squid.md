@@ -14,16 +14,16 @@ parent: Active Recon
 1. TOC
 {:toc}
 
-### Spose.py
+## Spose.py
 Scanning via `spose.py`
 Download link - https://github.com/aancw/spose
 
-#### Download 
+## Download Spose.py
 ```bash
 git clone https://github.com/aancw/spose.git
 ```
 
-#### Scan 
+## Scan 
 ```bash
 python spose.py --proxy http://$IP:3128 --target $IP
 ```

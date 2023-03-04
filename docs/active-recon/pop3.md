@@ -14,12 +14,12 @@ parent: Active Recon
 1. TOC
 {:toc}
 
-### Nmap Scan
+## Nmap Scan
 ```bash
 sudo nmap -A -p 110 --script=vuln --script=pop3* $IP -v | tee nmap-pop3.txt
 ```
 
-### Banner Grab
+## Banner Grab
 ```bash
 telnet $IP 110
 ```

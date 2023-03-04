@@ -14,7 +14,7 @@ parent: Active Recon
 1. TOC
 {:toc}
 
-### CVE-2020-11652
+## CVE-2020-11652
 SaltStack Exploit (Remote Code Execution) 
 
 * https://github.com/Al1ex/CVE-2020-11652

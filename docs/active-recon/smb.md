@@ -16,41 +16,39 @@ parent: Active Recon
 
 ---
 
-### SMB NSE Script Enumeration
+## SMB NSE Script Enumeration
 
 NSE script to enumerate SMB OS version
 ```bash
 sudo nmap -v -p 139, 445 --script=smb-os-discovery $IP
 ```
 
----
 Runs NSE SMB vuln scripts that won't crash the target machine
 ```bash
 nmap -v -p 139,445 --script=smb-vuln-* --script-args=safe=1 $IP
 ```
----
+
 Runs NSE SMB vuln scripts that **WILL** crash the target machine
 ```bash
 nmap -v -p 139,445 --script=smb-vuln-* --script-args $IP
 ```
----
 Runs all NSE SMB Scripts against 139/445 regardless of safety
 ```bash
 nmap -v -p 139,445 --script=smb-* $IP
 ```
----
+
 List SMB Shares
 ```bash
 nmap --script smb-enum-shares -p139,445 $IP
 ```
----
+
 Toggle safety argument and look for Vulnerability **MS08-067**. Unsafe means that it may crash the host.
 ```bash
 sudo nmap -v -p 139,445, --script=smb-vuln-ms08-067 --script-args=unsage=1 $IP
 ```
----
 
-### SMBClient 
+
+## SMBClient 
 
 List shares compatible with NT1 protocol 
 
@@ -101,7 +99,7 @@ smb: \> mget
 ```
 
 
-### SMBMap
+## SMBMap
 
 List SMB Shares
 ```bash
@@ -119,7 +117,7 @@ smbmap -H $IP -R
 ```
 
 
-### RPClient
+## RPClient
 
 Running null session on rpcclient:
 ```bash
@@ -138,13 +136,13 @@ rpclient> enumdomusers
 
 
 
-### Enum4Linux
+## Enum4Linux
 Scan machine for SMB information: 
 ```bash
 enum4linux $IP
 ```
 
-### Enum4Linux-ng
+## Enum4Linux-ng
 
 1. Install enum4linux-ng
 ```bash
@@ -174,7 +172,7 @@ enum4linux-ng -A $IP | tee enum4linux-ng.txt
 
 
 
-### CrackMapExec
+## CrackMapExec
 
 List SMB Shares (Unauthenticated)
 ```bash
@@ -187,7 +185,7 @@ crackmapexec smb $IP -u 'admin' -p 'password' --shares
 ```
 
 
-### NBTScan - Enumerating NetBIOS
+## NBTScan - Enumerating NetBIOS
 
 Scan host for NetBIOS:
 ```bash
@@ -200,7 +198,7 @@ sudo nbtscan -r $IP/24
 ```
 
 
-### NMBLookup - Enumerating NetBIOS
+## NMBLookup - Enumerating NetBIOS
 
 Scan host:
 ```bash
@@ -208,7 +206,7 @@ nmblookup -A $IP
 ```
 
 
-### Metasploit - SMB Shares Scanner
+## Metasploit - SMB Shares Scanner
 
 SMB Shares Scanner (Unauthenticated)
 ```bash
@@ -222,8 +220,7 @@ msfconsole -q -x 'use auxiliary/scanner/smb/smb_enumshares; set rhost $IP; explo
 
 
 
-### Finding Samba Version
-
+## Finding Samba Version
 Script to find Samba server version:
 ```bash
 #!/bin/sh
@@ -249,8 +246,7 @@ Script Usage:
 
 
 
-### Mounting SMB shares to attack machine
-
+## Mounting SMB shares to attack machine
 1. Make sure cifs  and cifs-helper  are installed:
 ```bash
 sudo apt install cifs cifs-utils
@@ -267,7 +263,7 @@ sudo mount -t cifs //$IP/<share name> /mnt/user
 ```
 
 
-### Unmount SMB Share
+## Unmount SMB Share
 ```bash
 sudo umount -a -t cifs -l
 ```

@@ -14,7 +14,7 @@ parent: Active Recon
 1. TOC
 {:toc}
 
-## **<ins>Default Credentials Check</ins>**
+## **Default Credentials Check**
 1. Login with the following usernames/passwords
 ```bash
 Username: root
@@ -30,12 +30,12 @@ ssh root@$IP
 
 
 
-## **<ins>SSH Nmap Scan</ins>**
+## **SSH Nmap Scan**
 ```bash
 sudo nmap -p 22 -A --script=ssh* --script=vuln $IP -v | tee nmap-ssh.txt
 ```
 
-## **<ins>SSH Key errors</ins>**
+## **SSH Key errors**
 Try this method if SSH key algorithm errors surface: 
 
 ```bash
